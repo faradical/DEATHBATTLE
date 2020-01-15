@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <title>Smoothed D3.js Radar Chart</title>
+        <header><h1>Death Battle!</h1></header>
+
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+		<!-- D3.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>		
+		<!--CSS Link-->
+		<link rel="stylesheet" type="text/css" href="radarchart_style.css">
+	</head>
+	<body>
+
+		<div class="radarChart" id="radarChart3"></div>
+
+        <script src="RadarChart_combined.js"></script>	
+        <script src="project.js"></script>	
+		<script>
+      
+      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+      
+			////////////////////////////////////////////////////////////// 
+			//////////////////////// Set-Up ////////////////////////////// 
+			////////////////////////////////////////////////////////////// 
+			var margin = {top: 100, right: 100, bottom: 100, left: 100},
+				width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+					
+			////////////////////////////////////////////////////////////// 
+			////////////////////////// Data ////////////////////////////// 
+			//////////////////////////////////////////////////////////////             
+            // var data = [
+            //           [//A-Bomb
+			// 			{axis:"Intelligence",value:0.38},
+			// 			{axis:"Strength",value:1},
+			// 			{axis:"Speed",value:0.17},
+			// 			{axis:"Durability",value:0.80},
+			// 			{axis:"Power",value:0.24},
+			// 			{axis:"Combat",value:0.64}	
+            //           ]
+            //         ,[//Abe Sapien
+            //             {axis:"Intelligence",value:0.88},
+			// 			{axis:"Strength",value:0.28},
+			// 			{axis:"Speed",value:0.35},
+			// 			{axis:"Durability",value:0.65},
+			// 			{axis:"Power",value:.5},
+			// 			{axis:"Combat",value:0.85}	
+			// 		  ]
+			// 		];
+			////////////////////////////////////////////////////////////// 
+			//////////////////// Draw the Chart ////////////////////////// 
+			////////////////////////////////////////////////////////////// 
+			// var color = d3.scale.ordinal()
+			// 	.range(["#00A0B0","#CC333F"]); //giving color to the blobs (blue, red)
+				
+			// var radarChartOptions = {
+			//   w: width,
+			//   h: height,
+			//   margin: margin,
+			//   maxValue: 0.5,
+			//   levels: 5,
+			//   roundStrokes: true,
+			//   color: color
+			// };
+			// //Call function to draw the Radar chart
+			// RadarChart(".radarChart", data, radarChartOptions);
+		</script>
+	</body>
+</html>

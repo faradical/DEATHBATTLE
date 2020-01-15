@@ -1,0 +1,237 @@
+/* 
+body{
+    text-align: center;
+}  */
+
+/* Navbar */
+
+.navbar{
+    max-height: 57px;
+}
+.navigation .navbar-brand{
+    color: green; 
+    margin-left: 30px; 
+    padding: inherit; 
+    font-weight: bold; 
+    background-color: rgb(75, 77, 76);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* .navbar{
+    background-color: purple; 
+    font-size: 15px; 
+} */
+/* .active, .dropdown-menu .dropdown-item:active a:hover{
+    background-color:teal!important; 
+} */
+
+.dropdown-item{
+    color: teal !important; 
+}
+
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
+    background-color::rgb(255, 255, 255, .3) !important; 
+}
+
+a{
+    font-size: 15px; 
+}
+
+.nav-link:hover{
+    background-color:rgb(255, 255, 255, .3) !important;
+}
+   
+.navbar-brand:hover{
+color: black !important;
+}
+
+/* Images */
+.character_img{
+    width:80% !important;
+    height:80% !important;
+    padding:auto;
+    margin: auto;
+}
+
+.results_img{
+    width:35%;
+    height:35%;
+    padding:auto;
+    margin: auto;  
+}
+.active, .panel:hover{
+    border-style: solid; 
+    
+}
+.visualization{
+    width:70% !important;
+    height:70% !important;
+    padding: 20px;
+}
+
+.jumbotron{
+    text-align: center;
+    background-position: 50% 25%;
+    background-size: 100%;
+    /* background-repeat: no-repeat;
+    background-color: black; */
+    background-image: url(https://files.slack.com/files-pri/TM7JST4FQ-FSF3K6SHM/hero3.jpg);
+}
+/* 
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+} */
+
+/* Title Class  */
+.title{
+    /* color:navy;  */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder; 
+    padding-top: 25px; 
+}
+
+.container{
+    width: auto;
+    height:auto;
+    align-self: center;
+    text-align: center;
+    margin:auto;
+} 
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+    height:auto;
+    align-self: center;
+    text-align: center;
+    margin:auto;
+} 
+
+/* Paragraph Element */
+
+p{
+ /* color: navy; */
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-size: 17px; 
+}
+
+/* Box Class */
+.box {
+    width: auto;
+    height: auto;
+    margin: auto;   
+    padding: 5px 5px 5px; 
+    color: white;
+    background-color:#ffffff80; 
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder; 
+
+}
+
+.row{
+    text-align: center;
+    margin:auto;
+    height:auto;
+    width: auto;
+}
+
+.col-{
+    padding: 0px 0px 0px 0px;
+    /* background-image: url(https://files.slack.com/files-pri/TM7JST4FQ-FS3QRLJCS/___pngtree___creative_vs_metal__font_4983551.png); */
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.col-sm-{
+    width: auto;
+    height: auto;
+    /* border: 3px solid black; */
+    background: transparent;
+    margin:auto;
+    padding: 0px 0px 0px 0px;
+    
+}
+
+#skills{
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    background: white;
+    margin:auto;
+    padding: 0px 0px 0px 0px;
+}
+
+#bio{
+    border: 3px solid black;
+    background-color: transparent;
+}
+.radarChart{
+    width: auto !important;
+    height: auto !important;
+    margin: auto !important;
+}
+
+.container-fluid{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder; 
+}
+/* Table
+.table{
+    font-size: 15px; 
+    border-top-color: purple !important; 
+} */
+
+/* Footer */
+footer{
+background-color: #00000050; 
+border-top-style: solid; 
+/* border-top-width: 5px;  */
+border-top-color:#ff000020;
+color: white; 
+min-height: 55px; 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px; 
+text-align: center; 
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+padding-top: 15px; 
+widows: 100%;
+}
+
+/* Media Queries */
+@media(max-width: 992px){
+
+.navbar{
+    max-height: none; 
+    padding: inherit;
+}
+.navbar div{
+    margin: inherit; 
+    background-color:white(53, 51, 51, 0.3);  
+}
+.navbar-brand{
+    padding: 10px !important; 
+}
+
+button{
+    margin-right: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+/*button:focus {
+
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focusring-color;
+    
+}*/
+}

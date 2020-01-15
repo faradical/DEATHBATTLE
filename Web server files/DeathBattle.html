@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <!-- Main Head -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Death Battle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- D3.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>		
+
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+        <!--CSS Link-->
+        <link rel="stylesheet" type="text/css" href="main_style.css">
+        <!-- CSS Link-->
+        <link rel="stylesheet" type="text/css" href="radarchart_style.css">
+
+
+    <!-- Radar Chart Head -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+                
+        <!-- Radar Chart margin -->
+        <script>
+            var margin = {top: 100, right: 100, bottom: 100, left: 90},
+                width = Math.min(450, window.innerWidth - 10) - margin.left - margin.right,
+                height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+        </script>
+    </head>
+
+    <!-- <header>
+        Navigation Selection
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="DeathBattle.html">Death Battle</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+
+                        Navigation to Comparisons and About The Team pages
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">About the Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comparisons.html">Hero Comparison</a>
+                        </li>
+
+                    </ul>
+                </div>
+        </nav>
+    </header> -->
+
+<!--Landing Page Content Section-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <!-- <h1 class="display-4">DEATH BATTLE!</h1> -->
+        <img class="character_img" src="https://fontmeme.com/permalink/200108/5de9630813ded0f8322e16189c0dcf8c.png" alt="comic-fonts"></a>
+        <!-- <p class="lead">hi</p> -->
+        </div>
+    </div>    
+
+    <body> 
+
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <!-- Left Container -->
+                <div class="col-md-4 col-lg-5">
+                    <!-- Left box  -->
+                    <div class="box">
+                        <h2 class="title">Fighter 1</h2>
+                        <hr>
+                        
+                        <!-- Dropdown Menu -->
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Character
+                            </button>
+                            <div class="dropdown-menu" id="character1" aria-labelledby="dropdownMenuButton"></div>
+                        </div> -->
+                        <select class="form-control" id="character1">
+                            <option>Choose your fighter!</option>
+                        </select>
+                        <br>
+                        
+                        <!-- Character Name -->
+                        <h5 class="title" id="name1"></h5>
+                        
+                        <!-- Character Image -->
+                        <div class="col-sm-auto" id="character1_img">
+                        <!-- <img id="character1_img"> -->
+                        <!-- <img src="https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/10441.jpg"> -->
+                        </div>
+                        <br>
+
+                        <!-- Skills Chart -->
+                        <div class="col-sm-auto" id="skills">
+                            <div class="radarChart" id="radarChart1">
+                                <!-- <script>RadarChart(".radarChart", data, radarChartOptions);</script> -->
+                            </div>
+                        </div>
+                        <br>
+
+                        <!-- Bio Table -->
+                        <div class="col-sm-auto">
+                                <table class="table table-striped table-dark"  id="bio" style="align-self: auto; align-content: center; text-align: center;">
+                                        <thead>
+                                            <tr>
+                                                <!-- <th scope="col" style="align-self: auto; align-content: center; text-align: center;"></th> -->
+                                                <th scope="col" colspan="2">Biography</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody1">
+
+                                        </tbody>
+                                      </table>
+                        </div>
+                        <br>
+                        
+                        <!-- Stick Figures -->
+                        <div class="col-sm-auto" id="skills">
+                        <!-- <svg width="500" height="1500"> -->
+                        <img id="idLeft"  src="blue.png" style="vertical-align:bottom" alt="blue guy" width="50" height="60">
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Versus container -->
+                <div class="col-" style="margin: auto; height: auto; width: auto;">
+                    <img class="character_img" src="https://fontmeme.com/permalink/200110/d8dfb0e561c7da89d406efc34cffc64e.png"/>
+                </div>
+                
+                <!-- Right Container -->
+                <div class="col-md-4 col-lg-5">
+                    <!-- Right box  -->
+                    <div class="box">
+                        <h2 class="title">Fighter 2</h2>
+                        <hr>
+                        
+                        <!-- Dropdown Menu -->
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Character
+                            </button>
+                            <div class="dropdown-menu" id="character2" aria-labelledby="dropdownMenuButton"></div>
+                        </div> -->
+                        <select class="form-control" id="character2">
+                            <option>Choose your fighter!</option>
+                        </select>
+                        <br>
+
+                        <!-- Character Name -->
+                        <h5 class="title" id="name2"></h5>
+
+                        <!-- Character Image -->
+                        <div class="col-sm-auto" id="character2_img">
+                        </div>
+                        <br>
+
+                        <!-- Skills Chart -->
+                        <div class="col-sm-auto" id="skills">
+                            <div class="radarChart" id="radarChart2">
+                                <!-- <script>RadarChart(".radarChart", data, radarChartOptions);</script> -->
+                            </div>
+                                
+                        </div>
+                        <br>
+
+                        <!-- Bio Table -->
+                        <div class="col-sm-auto">
+                            <table class="table table-striped table-dark"  id="bio" style="align-self: auto; align-content: center; text-align: center;">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th scope="col"></th> -->
+                                            <th scope="col" colspan="2">Biography</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody2">
+                                    </tbody>
+                            </table>
+                        </div>
+                        <br>
+
+                        <!-- Stick Figures -->
+                        <div class="col-sm-auto" id="skills">
+                        <!-- </svg> -->
+                        <img id="idRight" src="red.png" style="vertical-align:bottom" alt="red guy" width="50" height="60">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <br>
+           
+
+            <!-- Results Section -->
+            <div class="container-fluid">
+                <div class="box" id="results_box">
+                    <audio id="audio" src="fight.mp3" autostart="false"></audio>
+                    <button id="fight"  style="background-color: transparent; border: none;">
+                        <a onclick="PlaySound()">
+                            <img class="results_img" src="https://fontmeme.com/permalink/200114/7fdc142b87140a78b649ff003a19daea.png">
+                        </a>
+                    </button>
+                    <br>
+                    <!-- <audio id="audio" src="fight.mp3" autostart="false"></audio>
+                    <script>
+                        function PlaySound() {
+                            var sound = document.getElementById("audio");
+                            sound.play();
+                        }
+                    </script>
+                    <img class="results_img" src="https://fontmeme.com/permalink/200110/d39d3f7d2a7b4a648e7607e6f6002864.png" height="15px"/ onload="PlaySound()">
+                    <br>
+                    <br>
+
+                    <div class="container">
+                        <div class="row justify-content-md-center">
+                            
+                            <div class="col-sm-auto" style="margin: 5px; padding:0%">
+                                    <h2>Winner</h2>
+                                    <div id="winnerImage" ></div>
+                            </div>
+                            
+                            <div class="col-sm-auto" style="margin: 5px; padding:0%; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;">
+                                <h2>Skills Comparison</h2>
+                                <div class="col-sm-auto" id="bio" style="background-color: white;">
+                                <img><div class="radarChart" id="radarChart3"></div><img/>
+                                </div>       
+                            </div>
+
+                        </div>    
+                    </div> --> 
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <!--Footer Section-->
+        <footer class="sticky-footer">
+            <div>
+                <span>© Team Rocket 2019</span>
+            </div>
+
+        </footer>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- D3.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+        <script src="project.js"></script>        
+        <!-- <script src="RadarChart.js"></script>	 -->
+        <!-- <script src="RadarChart_combined.js"></script> -->
+    </body>
+</html>
+
