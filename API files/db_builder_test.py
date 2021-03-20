@@ -20,7 +20,7 @@ import requests
 
 #ESTABLISH BATABASE CONNECTION
 client = MC()
-db = client.death_battle
+db = client.death_battle_2
 col = db.characters
 
 col.drop()

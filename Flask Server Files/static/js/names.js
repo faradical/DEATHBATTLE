@@ -1,0 +1,1 @@
+var names = ["spiderman","batman","thanos","kitty pryde"];
