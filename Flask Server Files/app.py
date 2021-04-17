@@ -19,7 +19,7 @@ from pymongo import MongoClient as MC
 from flask import Flask, jsonify, request, render_template
 from bson import json_util
 import json
-#from flask_pymongo import PyMongo
+import requests
 
 # DEFINE FLASK APPLICATION
 app = Flask(__name__)
@@ -53,6 +53,37 @@ def AllNames():
 				names.append({"name": i['name'], "value": i['id']})
 	response = json_util.dumps({"characters": names})
 	return response
+
+@app.route("/database_setup_initial")
+def DB_setup():
+
+	#CLEAR DATABASE CONTENTS
+	col.drop()
+
+	#URL FOR SUPERHERO API
+	url = 'https://www.superheroapi.com/api.php/10220306273917389/'
+
+	#LOOP THROUGH DATA  ADDING CHARACTERS TO API
+	count = 0
+	for i in range(1, 732):
+
+		#EXECUTE API REQUEST
+		hero_url = url + str(i)
+		superhero_info = requests.get(hero_url).json()
+
+		#INSERT RESPONSE INTO DATABASE
+		col.insert_one(superhero_info)
+
+		#CHECK DATABASE INSERTION
+		record = col.find_one({"id":str(i)})
+		name = superhero_info['name']
+		if record:
+			print(f'{name}\t\t\tID:{i}\t\t\tSuccessfully inserted into database')
+		else:
+			print(f'{name}\t\t\tID:{i}\t\t\tEncountered an error')
+
+		#INCREMENT COUNTER
+		count += 1
 
 @app.route("/new_hero", methods=['POST'])
 def new_hero():
