@@ -40,7 +40,7 @@ def home():
 def IDLookup(characterID):
 	print(f"Character Lookup for {characterID} attempted.")
 	mDBobj = col.find_one({"id":characterID})
-	response = json_util.dumps(mDBobj)
+	response = jsonify(mDBobj)
 	return response
 
 @app.route("/all_names")
@@ -51,7 +51,7 @@ def AllNames():
 		if 'id' in i:
 			if i['powerstats']['intelligence'] != "null" and i['powerstats']['strength'] != "null" and i['powerstats']['speed'] != "null" and i['powerstats']['durability'] != "null" and i['powerstats']['power'] != "null" and i['powerstats']['combat'] != "null":
 				names.append({"name": i['name'], "value": i['id']})
-	response = json_util.dumps({"characters": names})
+	response = jsonify({"characters": names})
 	return response
 
 @app.route("/database_setup_initial")
@@ -84,6 +84,8 @@ def DB_setup():
 
 		#INCREMENT COUNTER
 		count += 1
+
+	return f"Added {len(list(col.find()))} heroes to the database"
 
 @app.route("/new_hero", methods=['POST'])
 def new_hero():

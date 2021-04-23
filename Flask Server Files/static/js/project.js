@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 function DropdownNoJutsu(dropdownid){
-	d3.json("http://127.0.0.1:5000/all_names", function(name_data){
+	d3.json("/deathbattle/all_names", function(name_data){
         drop_menu = d3.select(dropdownid)
         name_data.characters.forEach(function(name){
 			drop_menu.append("option").text(name.name).attr("value", name.value)
@@ -19,7 +19,7 @@ DropdownNoJutsu("#character2");
 ////////////////////// Character Name & Character Images & Bio Table Functions-------------------------------------------------------
 function BuildHTMLNoJutsu1(name){
 	
-	var queryUrl = 'http://127.0.0.1:5000/ID/'
+	var queryUrl = '/deathbattle/ID/'
 	var url = queryUrl + name; 
 
 	d3.json(url, function(response){
